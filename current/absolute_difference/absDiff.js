@@ -1,4 +1,5 @@
 //https://leetcode.com/problems/minimum-absolute-difference-in-bst/
+//todo TOO SLOW
 //*
  //Definition for a binary tree node.
 function TreeNode(val, left, right) {
