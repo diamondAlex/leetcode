@@ -1,10 +1,11 @@
 let x = 0
 
 var countRoutes = function(locations, start, finish, fuel) {
-    let memo = new Map()
+    let memo = []
     for(let i = 0;i<=locations.length;i++){
+        memo[i] = []
         for(let j = 0;j<=fuel;j++){
-            memo.set(`${i},${j}`,-1)
+            memo[i][j] = -1
         }
     }
     let total = countSubRoutes(locations,start,finish,fuel,memo)
@@ -13,7 +14,7 @@ var countRoutes = function(locations, start, finish, fuel) {
 
 var countSubRoutes = function(locations,start,finish,fuel, memo){
     x++
-    let memo_val = memo.get(`${start},${fuel}`)
+    let memo_val = memo[start][fuel]
     let subtotal = 0
     if(memo_val != -1){
         //console.log(`been here before, there is ${memo_val} routes`)
@@ -39,8 +40,9 @@ var countSubRoutes = function(locations,start,finish,fuel, memo){
 
     subtotal = subtotal==0 ? 0: subtotal % (Math.pow(10,9)+7)
 
-    memo.set(`${start},${fuel}`, subtotal)
-
+    memo[start][fuel] == -1 ? 
+        memo[start][fuel] = subtotal : 
+        memo[start][fuel] += subtotal;
     return subtotal
 }
 
