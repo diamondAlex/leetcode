@@ -24,7 +24,7 @@ for(let file of files){
                 code = code.toString()
                 code.split("\n").forEach((e) => {
                     if(e.includes("todo")){
-                        let todo = path + e.split("todo")[1].toString()
+                        let todo = path + e.split("todo")[1].toString() + "\n"
                         fs.appendFileSync('todo',todo)
                     }
                 })

@@ -1,3 +1,10 @@
 DO NOT EDIT, FILE AUTO WRITTEN WITH TODOS FROM SUBFOLDERS
 
 absolute_difference/absDiff.js TOO SLOW
+distCookies/distCookies.py complete failure, absutely braindead attemp, redo
+lastDay/lastDay.py review this thing. I needed the answer to figure out the binary search was needed to reduce exec time below minimum. Still overall super slow solution
+longuestNoRepeat/longuestNoRep.c there's something clearly wrong, the ret pointer should never have to be this big
+pairSmallSum/pairSmallSum.py this is disgusting, if reviewed, please do better
+pathMaxProb/pathMaxProb.js complete it, I didn't know the algo
+pathMaxProb/pathMaxProb.py this is bottom 5% stuff. Everything is wrong with it, except it works
+shortPathKey/shortPathKey.py lots of work for this one, very difficult to understand the Solution and why the solution actually is optimal
